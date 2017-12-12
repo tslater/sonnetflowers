@@ -10,42 +10,6 @@
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
 <script src="/jquery-ui/jquery-ui.min.js"></script>
-
-
-<script>
-
-  function changeToClearBanner(){
-    $('nav img').attr("src", "/images/white-logo.png");
-    $("nav").removeClass('opaque');
-  }
-
-  function changeToOpaqueBanner(){
-    $('nav img').attr("src", "/images/blue-logo.png");
-    $("nav").addClass('opaque');
-  }
-
-  $(document).ready(function () {
-      $( "#entry\\.146157983" ).datepicker({
-        minDate: new Date()
-      });
-      var scroll_start = 0;
-      var startchange = $(".content");
-
-      if (startchange.length) {
-          $(document).scroll(function () {
-              scroll_start = $(this).scrollTop() + $('nav').height();
-              var offset = startchange.offset();
-              if (scroll_start > offset.top) {
-                  changeToOpaqueBanner();
-              } else {
-                  changeToClearBanner();
-              }
-          });
-      }
-
-      $(document).trigger('scroll');
-  });
-</script>
 </head>
 
 <body>
@@ -114,7 +78,40 @@
   </div>
 </div>
 
+<script>
 
+  function changeToClearBanner(){
+    $('nav img').attr("src", "/images/white-logo.png");
+    $("nav").removeClass('opaque');
+  }
+
+  function changeToOpaqueBanner(){
+    $('nav img').attr("src", "/images/blue-logo.png");
+    $("nav").addClass('opaque');
+  }
+
+  $(document).ready(function () {
+      $( "#entry\\.146157983" ).datepicker({
+        minDate: new Date()
+      });
+      var scroll_start = 0;
+      var startchange = $(".content");
+
+      if (startchange.length) {
+          $(document).scroll(function () {
+              scroll_start = $(this).scrollTop() + $('nav').height();
+              var offset = startchange.offset();
+              if (scroll_start > offset.top) {
+                  changeToOpaqueBanner();
+              } else {
+                  changeToClearBanner();
+              }
+          });
+      }
+
+      $(document).trigger('scroll');
+  });
+</script>
 
 </body>
 </html>
