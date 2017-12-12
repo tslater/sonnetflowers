@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sonnet Flowers</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="/jquery-ui/jquery-ui.min.css">
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="/jquery-ui/jquery-ui.min.js"></script>
+
+
+<script>
+
+  function changeToClearBanner(){
+    $('nav img').attr("src", "/images/white-logo.png");
+    $("nav").removeClass('opaque');
+  }
+
+  function changeToOpaqueBanner(){
+    $('nav img').attr("src", "/images/blue-logo.png");
+    $("nav").addClass('opaque');
+  }
+
+  $(document).ready(function () {
+      $( "#entry\\.146157983" ).datepicker({
+        minDate: new Date()
+      });
+      var scroll_start = 0;
+      var startchange = $(".content");
+
+      if (startchange.length) {
+          $(document).scroll(function () {
+              scroll_start = $(this).scrollTop() + $('nav').height();
+              var offset = startchange.offset();
+              if (scroll_start > offset.top) {
+                  changeToOpaqueBanner();
+              } else {
+                  changeToClearBanner();
+              }
+          });
+      }
+
+      $(document).trigger('scroll');
+  });
+</script>
+</head>
+
+<body>
+
+
+<nav>
+  <img class="across-image" src="/images/white-logo.png" alt="">
+  <ul class='across-menu'>
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+
+
+<div class='top-visual'></div>
+<div class="content">
+  <div class="background-image" id="image1"></div>
+  <div class="background-image" id="image2"></div>
+  <div class="background-image" id="image3"></div>
+  <div class="background-image" id="image4"></div>
+  <div class="background-image" id="image5"></div>
+  <div class="background-image" id="image6"></div>
+  <div class="background-image" id="image7"></div>
+  <div class="background-image" id="image8"></div>
+  <div class="background-image" id="image9"></div>
+  <div id='about'>
+    <h1 class='fancy'><span>Sonnet Flowers</span></h1>
+    <p>
+      Hi, I’m Carrie, a local florist in Provo Utah. Growing up, I always admired the way great florists make unexpectedly beautiful flower arrangements.
+      After my planning own wedding, I wasn’t ready to stop coming up with ideas for arrangements, and I started learning how to work with flowers.
+      I'm working on building my own stunning wedding portfolio, and I want you to have your dream flowers at your wedding. Send me a message, let’s talk about your bouquet ideas.
+    </p>
+  </div>
+  <div id='gallery'>
+    <h1 class='fancy'><span>Gallery</span></h1>
+    <div class="gallery-photo-wrapper">
+      <img src='photos/thumbs/3.jpg'/>
+      <img src='photos/thumbs/6.jpg'/>
+      <img src='photos/thumbs/1.jpg'/>
+      <img src='photos/thumbs/4.jpg'/>
+      <!-- <img src='photos/thumbs/2.jpg'/> -->
+      <img src='photos/thumbs/5.jpg'/>
+    </div>
+  </div>
+  <div id='contact'>
+    <h1 class='fancy'><span>Contact</span></h1>
+    <p>
+    Please fill out the form below and I'll reach out to you quickly to talk options and pricing.
+    </p>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLScq-ModqWhHfzSnlCQqJiHBZQomIFtmyWPlahMmE6nMpCTF9g/formResponse">
+
+      <label for="entry.1876572870">Name</label>
+      <input id="entry.1876572870" type="text" name="entry.1876572870" value="">
+
+      <label for="entry.1939108360">Phone or Email</label>
+      <input id="entry.1939108360" type="text" name="entry.1939108360" value="">
+
+      <label for="entry.146157983">Event Date</label>
+      <input id="entry.146157983" type="text" name="entry.146157983" value="">
+
+      <input type="submit" />
+    </form>
+  </div>
+</div>
+
+
+
+</body>
+</html>
