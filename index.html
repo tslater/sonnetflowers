@@ -35,7 +35,8 @@
   <div class="background-image" id="image7"></div>
   <div class="background-image" id="image8"></div>
   <div class="background-image" id="image9"></div>
-  <div id='about'>
+  <div>
+    <a class="anchor" id="about"></a>
     <h1 class='fancy'><span>Sonnet Flowers</span></h1>
     <p>
       Hi, I’m Carrie, a local florist in Provo Utah. Growing up, I always admired the way great florists make unexpectedly beautiful flower arrangements.
@@ -43,7 +44,8 @@
       I'm working on building my own stunning wedding portfolio, and I want you to have your dream flowers at your wedding. Send me a message, let’s talk about your bouquet ideas.
     </p>
   </div>
-  <div id='gallery'>
+  <div >
+    <a class="anchor" id="gallery"></a>
     <h1 class='fancy'><span>Gallery</span></h1>
     <div class="gallery-photo-wrapper">
       <img src='photos/thumbs/3.jpg'/>
@@ -53,7 +55,8 @@
       <img src='photos/thumbs/5.jpg'/>
     </div>
   </div>
-  <div id='contact'>
+  <div>
+    <a class="anchor" id="contact"></a>
     <h1 class='fancy'><span>Contact</span></h1>
     <p>
     Please fill out the form below and I'll reach out to you quickly to talk options and pricing.
@@ -69,11 +72,11 @@
       <label for="entry.146157983">Event Date</label>
       <input id="entry.146157983" type="text" name="entry.146157983" value="">
 
-      <input type="submit" />
+      <input type="submit" value="Submit"/>
     </form>
   </div>
 </div>
-
+<div class="footer"><p>&copy; 2018 Utah Wedding Flowers LLC<p></div>
 <script>
 
   function changeToClearBanner(){
@@ -104,7 +107,8 @@
 
       $(document).trigger('scroll');
       $( "#entry\\.146157983" ).datepicker({
-        minDate: new Date()
+        minDate: new Date(),
+        dateFormat: 'yy-mm-dd'
       });
   });
 </script>

@@ -219,6 +219,21 @@ form input{
   border: 1px solid #c1c0c0;
 }
 
+div.footer{
+  padding: 45px 0;
+  text-align: center;
+  background-color: #12364A;
+  color: whitesmoke;
+  font-weight: 400;
+  margin-top: 25px;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -110px;
+  visibility: hidden;
+}
 
 @media (max-width: 630px) {
   .across-image{
