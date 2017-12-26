@@ -217,6 +217,7 @@ form input{
 .gallery-photo-wrapper img{
   margin: 10px auto;
   border: 1px solid #c1c0c0;
+  max-width: 100%;
 }
 
 div.footer{
